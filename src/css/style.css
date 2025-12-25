@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --neon-cyan: #00f0ff;
+    --neon-purple: #b026ff;
+    --neon-pink: #ff006e;
+    --dark-bg: #0a0a0f;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    color: #e0e0e0;
+    overflow-x: hidden;
+}
+
+.font-orbitron {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.glass-card {
+    background: rgba(15, 15, 25, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 0 20px rgba(0, 240, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(0, 240, 255, 0.4);
+    box-shadow: 0 12px 40px rgba(0, 240, 255, 0.2),
+                inset 0 0 30px rgba(0, 240, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.landing-title {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-smooth: always;
+}
+
+.neon-border {
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.5),
+                0 0 20px rgba(0, 240, 255, 0.3),
+                inset 0 0 10px rgba(0, 240, 255, 0.1);
+}
+
+.btn-futuristic {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.2), rgba(176, 38, 255, 0.2));
+    border: 1px solid rgba(0, 240, 255, 0.5);
+    color: var(--neon-cyan);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-futuristic::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-futuristic:hover::before {
+    left: 100%;
+}
+
+.btn-futuristic:hover {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.3), rgba(176, 38, 255, 0.3));
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.input-futuristic {
+    background: rgba(15, 15, 25, 0.6);
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    color: #e0e0e0;
+    padding: 12px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.input-futuristic:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+    background: rgba(15, 15, 25, 0.8);
+}
+
+.input-futuristic::placeholder {
+    color: rgba(224, 224, 224, 0.5);
+}
+
+.table-futuristic {
+    background: rgba(15, 15, 25, 0.6);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.table-futuristic thead {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(176, 38, 255, 0.1));
+    border-bottom: 2px solid rgba(0, 240, 255, 0.3);
+}
+
+.table-futuristic th {
+    color: var(--neon-cyan);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 16px;
+}
+
+.table-futuristic td {
+    padding: 16px;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.1);
+}
+
+.table-futuristic tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table-futuristic tbody tr:hover {
+    background: rgba(0, 240, 255, 0.1);
+    transform: scale(1.01);
+}
+
+.stat-card {
+    background: linear-gradient(135deg, rgba(0, 240, 255, 0.1), rgba(176, 38, 255, 0.1));
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    border-radius: 16px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-cyan), var(--neon-purple), var(--neon-pink));
+    opacity: 0.6;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 240, 255, 0.3);
+    border-color: var(--neon-cyan);
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.nav-link {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 240, 255, 0.8), 0 0 30px rgba(0, 240, 255, 0.5);
+    }
+}
+
+.pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    table {
+        font-size: 0.875rem;
+    }
+    
+    table th,
+    table td {
+        padding: 0.5rem;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+input[type="date"],
+input[type="time"],
+input[type="number"] {
+    font-size: 16px;
+}
+
+@media (max-width: 480px) {
+    input[type="date"],
+    input[type="time"] {
+        font-size: 16px;
+    }
+}
+
+.flash-message {
+    position: relative;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.flash-close {
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 4px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flash-close:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.flash-close:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
