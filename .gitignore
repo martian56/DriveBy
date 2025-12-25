@@ -1,6 +1,6 @@
 # Environment variables
 .env
-.ufazien.json
+# .ufazien.json
 
 # Ufazien CLI
 ufazien.py
