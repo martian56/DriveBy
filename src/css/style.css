@@ -257,3 +257,17 @@ input[type="number"] {
     outline: 2px solid currentColor;
     outline-offset: 2px;
 }
+
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+#mobile-menu-button {
+    z-index: 60;
+}
+
+@media (min-width: 768px) {
+    #mobile-menu {
+        display: flex !important;
+    }
+}
