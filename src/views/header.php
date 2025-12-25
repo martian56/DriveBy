@@ -45,6 +45,7 @@
                             <li><a href="index.php?page=form" class="nav-link px-4 py-2 rounded-lg transition-all block <?php echo ($page ?? '') === 'form' ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50' : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'; ?>">Add Experience</a></li>
                             <li><a href="index.php?page=summary" class="nav-link px-4 py-2 rounded-lg transition-all block <?php echo ($page ?? '') === 'summary' ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50' : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'; ?>">Summary</a></li>
                             <li><a href="index.php?page=statistics" class="nav-link px-4 py-2 rounded-lg transition-all block <?php echo ($page ?? '') === 'statistics' ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-500/50' : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10'; ?>">Statistics</a></li>
+                            <li><a href="https://drift-boy.ufazien.com/" target="_blank" rel="noopener noreferrer" class="nav-link px-4 py-2 rounded-lg transition-all block text-gray-300 hover:text-purple-400 hover:bg-purple-500/10">Practice</a></li>
                         </ul>
                         <div class="flex flex-col md:flex-row items-start md:items-center gap-3 px-4 md:px-0 mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-0 border-cyan-500/20 md:border-0 w-full md:w-auto">
                             <span class="text-sm text-gray-300 font-rajdhani"><?php echo htmlspecialchars($_SESSION['username'] ?? ''); ?></span>
